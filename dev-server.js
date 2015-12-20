@@ -20,7 +20,7 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler));
 
 const indexPath = path.join(__dirname, 'index.html');
-app.get('*', ({res}) => res.sendFile(indexPath));
+app.get('*', ({ res }) => res.sendFile(indexPath));
 
 app.listen(port, hostname, (err) => {
   if (err) {
